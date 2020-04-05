@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FBA84B3C64730335A0C868B /* Pods_FlashcardRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57177AB89B178E0B527179A1 /* Pods_FlashcardRealm.framework */; };
+		C895FC41243A46BB00C47248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FC40243A46BB00C47248 /* AppDelegate.swift */; };
+		C895FC43243A46BB00C47248 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FC42243A46BB00C47248 /* SceneDelegate.swift */; };
+		C895FC45243A46BB00C47248 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FC44243A46BB00C47248 /* ViewController.swift */; };
+		C895FC48243A46BB00C47248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C895FC46243A46BB00C47248 /* Main.storyboard */; };
+		C895FC4A243A46C200C47248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C895FC49243A46C200C47248 /* Assets.xcassets */; };
+		C895FC4D243A46C200C47248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C895FC4B243A46C200C47248 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		57177AB89B178E0B527179A1 /* Pods_FlashcardRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashcardRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B392A30254B97876E1050C7 /* Pods-FlashcardRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashcardRealm.release.xcconfig"; path = "Target Support Files/Pods-FlashcardRealm/Pods-FlashcardRealm.release.xcconfig"; sourceTree = "<group>"; };
+		C895FC3D243A46BB00C47248 /* FlashcardRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashcardRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C895FC40243A46BB00C47248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C895FC42243A46BB00C47248 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C895FC44243A46BB00C47248 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C895FC47243A46BB00C47248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C895FC49243A46C200C47248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C895FC4C243A46C200C47248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C895FC4E243A46C200C47248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CE4C0C0EF12F24EE6BE308 /* Pods-FlashcardRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashcardRealm.debug.xcconfig"; path = "Target Support Files/Pods-FlashcardRealm/Pods-FlashcardRealm.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C895FC3A243A46BB00C47248 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FBA84B3C64730335A0C868B /* Pods_FlashcardRealm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6932DB5287B6150CE9DD436F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0CE4C0C0EF12F24EE6BE308 /* Pods-FlashcardRealm.debug.xcconfig */,
+				6B392A30254B97876E1050C7 /* Pods-FlashcardRealm.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2EFEF4B5AAF21C1F4840B94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57177AB89B178E0B527179A1 /* Pods_FlashcardRealm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C895FC34243A46BB00C47248 = {
+			isa = PBXGroup;
+			children = (
+				C895FC3F243A46BB00C47248 /* FlashcardRealm */,
+				C895FC3E243A46BB00C47248 /* Products */,
+				6932DB5287B6150CE9DD436F /* Pods */,
+				A2EFEF4B5AAF21C1F4840B94 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C895FC3E243A46BB00C47248 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C895FC3D243A46BB00C47248 /* FlashcardRealm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C895FC3F243A46BB00C47248 /* FlashcardRealm */ = {
+			isa = PBXGroup;
+			children = (
+				C895FC40243A46BB00C47248 /* AppDelegate.swift */,
+				C895FC42243A46BB00C47248 /* SceneDelegate.swift */,
+				C895FC44243A46BB00C47248 /* ViewController.swift */,
+				C895FC46243A46BB00C47248 /* Main.storyboard */,
+				C895FC49243A46C200C47248 /* Assets.xcassets */,
+				C895FC4B243A46C200C47248 /* LaunchScreen.storyboard */,
+				C895FC4E243A46C200C47248 /* Info.plist */,
+			);
+			path = FlashcardRealm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C895FC3C243A46BB00C47248 /* FlashcardRealm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C895FC51243A46C200C47248 /* Build configuration list for PBXNativeTarget "FlashcardRealm" */;
+			buildPhases = (
+				FAC64C8CC451A130CEA33B36 /* [CP] Check Pods Manifest.lock */,
+				C895FC39243A46BB00C47248 /* Sources */,
+				C895FC3A243A46BB00C47248 /* Frameworks */,
+				C895FC3B243A46BB00C47248 /* Resources */,
+				228B553BE69ACD3E484943E9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlashcardRealm;
+			productName = FlashcardRealm;
+			productReference = C895FC3D243A46BB00C47248 /* FlashcardRealm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C895FC35243A46BB00C47248 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Ivo Specht";
+				TargetAttributes = {
+					C895FC3C243A46BB00C47248 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = C895FC38243A46BB00C47248 /* Build configuration list for PBXProject "FlashcardRealm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C895FC34243A46BB00C47248;
+			productRefGroup = C895FC3E243A46BB00C47248 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C895FC3C243A46BB00C47248 /* FlashcardRealm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C895FC3B243A46BB00C47248 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C895FC4D243A46C200C47248 /* LaunchScreen.storyboard in Resources */,
+				C895FC4A243A46C200C47248 /* Assets.xcassets in Resources */,
+				C895FC48243A46BB00C47248 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		228B553BE69ACD3E484943E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashcardRealm/Pods-FlashcardRealm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlashcardRealm/Pods-FlashcardRealm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlashcardRealm/Pods-FlashcardRealm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAC64C8CC451A130CEA33B36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlashcardRealm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C895FC39243A46BB00C47248 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C895FC45243A46BB00C47248 /* ViewController.swift in Sources */,
+				C895FC41243A46BB00C47248 /* AppDelegate.swift in Sources */,
+				C895FC43243A46BB00C47248 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C895FC46243A46BB00C47248 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C895FC47243A46BB00C47248 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C895FC4B243A46C200C47248 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C895FC4C243A46C200C47248 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C895FC4F243A46C200C47248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C895FC50243A46C200C47248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C895FC52243A46C200C47248 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0CE4C0C0EF12F24EE6BE308 /* Pods-FlashcardRealm.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3RH9TCRL6;
+				INFOPLIST_FILE = FlashcardRealm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivospecht.FlashcardRealm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C895FC53243A46C200C47248 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B392A30254B97876E1050C7 /* Pods-FlashcardRealm.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U3RH9TCRL6;
+				INFOPLIST_FILE = FlashcardRealm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivospecht.FlashcardRealm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C895FC38243A46BB00C47248 /* Build configuration list for PBXProject "FlashcardRealm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C895FC4F243A46C200C47248 /* Debug */,
+				C895FC50243A46C200C47248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C895FC51243A46C200C47248 /* Build configuration list for PBXNativeTarget "FlashcardRealm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C895FC52243A46C200C47248 /* Debug */,
+				C895FC53243A46C200C47248 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C895FC35243A46BB00C47248 /* Project object */;
+}
