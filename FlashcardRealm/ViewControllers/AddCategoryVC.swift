@@ -50,7 +50,9 @@ class AddCategoryVC: UIViewController {
                 categoryTextfield.text = ""
             } else {
                 categoryTextfield.text          = ""
-                categoryTextfield.placeholder   = "You already had this category."
+                categoryTextfield.placeholder   = "You already had this category. Please enter another"
+                
+                // THIS SHOULD GENERATE A LABEL
             }
         }
     }

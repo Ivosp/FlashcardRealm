@@ -10,13 +10,20 @@ import Foundation
 
 struct Constants {
     
+    struct DatabaseNames {
+        static let primaryKey               = "categoryName"
+    }
+    
     struct Segues {
         
         static let AddCategorySegue         = "AddNewCategorySegue"
         static let MenuToAddQuestionsSegue  = "MenuToAddQuestionsVC"
+        static let MenuToDataSegue          = "LookAtDataSegue"
     }
     
     struct CategoryTableView {
+        
+        static let CategoryCell             = "CategoryCell"
         
     }
     

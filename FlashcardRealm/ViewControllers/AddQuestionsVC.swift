@@ -56,6 +56,10 @@ class AddQuestionsVC: UIViewController {
                     newQuestion.category    = selectedCategory?.categoryName as! String
                     newQuestion.dateCreated = Date()
                     selectedCategory?.questions.append(newQuestion)
+                    print("Successfully saved question!")
+                    questionTextfield.text = ""
+                    answerTextfield.text = ""
+                    hintTextfield.text = ""
                 }
                 
             } catch {

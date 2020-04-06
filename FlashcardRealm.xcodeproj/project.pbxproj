@@ -19,6 +19,7 @@
 		C895FC4A243A46C200C47248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C895FC49243A46C200C47248 /* Assets.xcassets */; };
 		C895FC4D243A46C200C47248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C895FC4B243A46C200C47248 /* LaunchScreen.storyboard */; };
 		C8A4D26C243A79F100F2425C /* AddQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4D26B243A79F100F2425C /* AddQuestionsVC.swift */; };
+		C8A4D26E243BB2E200F2425C /* CategoriesDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A4D26D243BB2E200F2425C /* CategoriesDataVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C895FC4C243A46C200C47248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C895FC4E243A46C200C47248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8A4D26B243A79F100F2425C /* AddQuestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsVC.swift; sourceTree = "<group>"; };
+		C8A4D26D243BB2E200F2425C /* CategoriesDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDataVC.swift; sourceTree = "<group>"; };
 		D0CE4C0C0EF12F24EE6BE308 /* Pods-FlashcardRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashcardRealm.debug.xcconfig"; path = "Target Support Files/Pods-FlashcardRealm/Pods-FlashcardRealm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				C895FC44243A46BB00C47248 /* ViewController.swift */,
 				C8160CFA243A50FB009C5A51 /* AddCategoryVC.swift */,
 				C8A4D26B243A79F100F2425C /* AddQuestionsVC.swift */,
+				C8A4D26D243BB2E200F2425C /* CategoriesDataVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8160CF6243A4E34009C5A51 /* Question.swift in Sources */,
+				C8A4D26E243BB2E200F2425C /* CategoriesDataVC.swift in Sources */,
 				C895FC45243A46BB00C47248 /* ViewController.swift in Sources */,
 				C8160CFB243A50FB009C5A51 /* AddCategoryVC.swift in Sources */,
 				C8160CF4243A4D5A009C5A51 /* Category.swift in Sources */,

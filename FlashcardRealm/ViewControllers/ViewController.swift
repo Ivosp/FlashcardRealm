@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func lookAtData(_ sender: UIButton) {
+        performSegue(withIdentifier: Constants.Segues.MenuToDataSegue, sender: self)
     }
     
 }
