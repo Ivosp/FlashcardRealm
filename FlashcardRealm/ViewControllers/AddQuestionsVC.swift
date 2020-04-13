@@ -37,6 +37,11 @@ class AddQuestionsVC: UIViewController {
         categoryPicker.dataSource   = self
         categoryPicker.reloadAllComponents()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        categoryPicker.selectRow(0, inComponent: 0, animated: true)
+        pickerView(categoryPicker, didSelectRow: 0, inComponent: 0)
+    }
     
     func loadCategories() {
         categories = realm.objects(Category.self).sorted(byKeyPath: "categoryName", ascending: true)
@@ -108,6 +113,7 @@ extension AddQuestionsVC: UIPickerViewDelegate, UIPickerViewDataSource {
         
         if categories?.isEmpty == false {
             selectedCategory = categories?[row]
+            print(selectedCategory)
         } else {
             return
         }

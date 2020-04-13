@@ -20,12 +20,26 @@ class CategoriesDataVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Categories"
+        
         loadCategories()
         
         tableView.delegate      = self
         tableView.dataSource    = self
         tableView.reloadData()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     @IBAction func addCategoryButton(_ sender: UIButton) {
@@ -132,6 +146,16 @@ extension CategoriesDataVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        performSegue(withIdentifier: Constants.Segues.CategoriesToQuestionsSegue, sender: self)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! QuestionsDataVC
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.selectedCategory = categories?[indexPath.row]
+        }
         
     }
     
