@@ -19,8 +19,10 @@ struct Constants {
         static let AddCategorySegue             = "AddNewCategorySegue"
         static let MenuToAddQuestionsSegue      = "MenuToAddQuestionsVC"
         static let MenuToDataSegue              = "LookAtDataSegue"
+        static let MenuToTestingSegue           = "TestYourselfSegue"
         static let CategoriesToQuestionsSegue   = "CatToQuestionsSegue"
         static let AddQuestionSegue             = "AddQuestionSegue"
+        
     }
     
     struct CategoryTableView {

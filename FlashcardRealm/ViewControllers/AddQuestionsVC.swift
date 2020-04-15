@@ -18,12 +18,8 @@ class AddQuestionsVC: UIViewController {
     
     
     @IBOutlet weak var categoryPicker: UIPickerView!
-    
-
     @IBOutlet weak var questionTextfield: UITextField!
-    
     @IBOutlet weak var answerTextfield: UITextField!
-    
     @IBOutlet weak var hintTextfield: UITextField!
     
     
@@ -33,9 +29,16 @@ class AddQuestionsVC: UIViewController {
 
         loadCategories()
         // Do any additional setup after loading the view.
+        
+        // Categorypicker delegation
         categoryPicker.delegate     = self
         categoryPicker.dataSource   = self
         categoryPicker.reloadAllComponents()
+        
+        // Textfield Delegation
+        questionTextfield.delegate  = self
+        answerTextfield.delegate    = self
+        hintTextfield.delegate      = self
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -48,7 +51,7 @@ class AddQuestionsVC: UIViewController {
     }
     
     
-    @IBAction func submitQuestion(_ sender: Any) {
+    @IBAction func submitQuestion(_ sender: Any?) {
         
         if let question = questionTextfield.text, let answer = answerTextfield.text, let hint = hintTextfield.text {
             
@@ -70,9 +73,7 @@ class AddQuestionsVC: UIViewController {
             } catch {
                 print("Error saving data \(error)")
             }
-            
         }
-        
     }
     
     /*
@@ -90,12 +91,10 @@ class AddQuestionsVC: UIViewController {
 extension AddQuestionsVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
+        return 1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        
         return categories?.count ?? 1
     }
     
@@ -106,7 +105,6 @@ extension AddQuestionsVC: UIPickerViewDelegate, UIPickerViewDataSource {
         } else {
             return "No categories added yet."
         }
-        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -117,8 +115,24 @@ extension AddQuestionsVC: UIPickerViewDelegate, UIPickerViewDataSource {
         } else {
             return
         }
-        
     }
 
 
+}
+
+extension AddQuestionsVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.questionTextfield {
+            textField.resignFirstResponder()
+            answerTextfield.becomeFirstResponder()
+        } else if textField == self.answerTextfield {
+            textField.resignFirstResponder()
+            hintTextfield.becomeFirstResponder()
+        } else if textField == self.hintTextfield {
+            submitQuestion(nil)
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }

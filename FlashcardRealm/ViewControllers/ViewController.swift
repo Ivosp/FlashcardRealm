@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func testYourself(_ sender: UIButton) {
+        performSegue(withIdentifier: Constants.Segues.MenuToTestingSegue, sender: self)
+    }
     
     @IBAction func addNewCategory(_ sender: UIButton) {
         performSegue(withIdentifier: Constants.Segues.AddCategorySegue, sender: self)

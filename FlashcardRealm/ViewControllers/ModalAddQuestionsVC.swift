@@ -8,13 +8,14 @@
 
 import UIKit
 import RealmSwift
+import IQKeyboardManagerSwift
 
 protocol RefreshDataDelegate {
     func refreshData()
 }
 
 
-class ModalAddQuestionsVC: UIViewController {
+class ModalAddQuestionsVC: UIViewController{
     let realm = try! Realm()
 
     @IBOutlet weak var questionTextfield: UITextField!
@@ -26,11 +27,15 @@ class ModalAddQuestionsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        questionTextfield.delegate = self
+        answerTextfield.delegate = self
+        hintTextfield.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addQustion(_ sender: UIButton) {
+    @IBAction func addQustion(_ sender: UIButton?) {
         
         if let question = questionTextfield.text, let answer = answerTextfield.text, let hint = hintTextfield.text, let category = selectedCategory?.categoryName {
             
@@ -57,14 +62,22 @@ class ModalAddQuestionsVC: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+extension ModalAddQuestionsVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.questionTextfield {
+            textField.resignFirstResponder()
+            answerTextfield.becomeFirstResponder()
+        } else if textField == self.answerTextfield {
+            textField.resignFirstResponder()
+            hintTextfield.becomeFirstResponder()
+        } else if textField == self.hintTextfield {
+            addQustion(nil)
+            textField.resignFirstResponder()
+        }
+        return true
     }
-    */
-
 }

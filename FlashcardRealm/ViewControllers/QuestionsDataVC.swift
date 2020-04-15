@@ -11,11 +11,12 @@ import RealmSwift
 
 class QuestionsDataVC: UIViewController, RefreshDataDelegate {
     
+     // MARK: - Delegate Methods from ModalAddQuestionsVC
     func refreshData() {
         questionsTableView.reloadData()
     }
     
-    
+    // MARK: - Constants, Variables and Outlets
     let realm = try! Realm()
     
     var questions: Results<Question>?
@@ -25,20 +26,14 @@ class QuestionsDataVC: UIViewController, RefreshDataDelegate {
         }
     }
     
-    
-    
-    
     @IBOutlet weak var questionsTableView: UITableView!
     
-    
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         loadQuestions()
         
-        
-        
         questionsTableView.register(UINib(nibName: Constants.QuestionsTableView.QuestionCell, bundle: nil), forCellReuseIdentifier: Constants.QuestionsTableView.QuestionCell)
-        
         questionsTableView.delegate = self
         questionsTableView.dataSource = self
         questionsTableView.reloadData()
@@ -46,28 +41,13 @@ class QuestionsDataVC: UIViewController, RefreshDataDelegate {
         
         title = "Questions - \(selectedCategory?.categoryName ?? "Test")"
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         print("View Will Appear")
         questionsTableView.reloadData()
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    @IBAction func addQuestion(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: Constants.Segues.AddQuestionSegue, sender: self)
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -76,6 +56,14 @@ class QuestionsDataVC: UIViewController, RefreshDataDelegate {
         destinationVC.delegate = self
     }
     
+    // MARK: - IBActions
+    @IBAction func addQuestion(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: Constants.Segues.AddQuestionSegue, sender: self)
+        
+    }
+    
+    // MARK: - General Methods
     func loadQuestions() {
         questions = selectedCategory?.questions.sorted(byKeyPath: "dateCreated", ascending: true)
        
@@ -83,6 +71,7 @@ class QuestionsDataVC: UIViewController, RefreshDataDelegate {
     
 }
 
+// MARK: - TableviewDelegate and DataSource methods
 extension QuestionsDataVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,27 +79,42 @@ extension QuestionsDataVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questions?.count ?? 1
+        
+        var numberOfQuestions = 0
+        
+        if let questionCount = questions?.count {
+            if questionCount == 0 {
+                numberOfQuestions = 1
+            } else {
+                numberOfQuestions = questionCount
+            }
+        }
+        return numberOfQuestions
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.QuestionsTableView.QuestionCell, for: indexPath) as! QuestionsCell
         
-        if let question = questions?[indexPath.row] {
-            cell.questionLabel.text = "Question: \(question.question)"
-            cell.answerLabel.text = "A: \(question.answer)"
-            
-            if question.hint.isEmpty == true {
-                cell.hintLabel.isHidden = true
-            } else {
-                cell.hintLabel.text = "H: \(question.hint)"
+        if questions?.isEmpty == false {
+
+            if let question = questions?[indexPath.row] {
+                cell.questionLabel.text = "Question: \(question.question)"
+                cell.answerLabel.text = "A: \(question.answer)"
+                cell.answerLabel.isHidden = false
+                
+                if question.hint.isEmpty == true {
+                    cell.hintLabel.isHidden = true
+                } else {
+                    cell.hintLabel.isHidden = false
+                    cell.hintLabel.text = "H: \(question.hint)"
+                }
             }
         } else if questions?.isEmpty == true {
             cell.questionLabel.text = "Please enter a question"
-            cell.answerLabel.text = "Please commit to an answer"
-            cell.hintLabel.text = "Duh."
+            cell.questionLabel.isHighlighted = true
+            cell.answerLabel.isHidden = true
+            cell.hintLabel.isHidden = true
         }
-        
         return cell
     }
     

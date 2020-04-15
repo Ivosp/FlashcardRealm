@@ -12,6 +12,7 @@
 		C8160CF6243A4E34009C5A51 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8160CF5243A4E34009C5A51 /* Question.swift */; };
 		C8160CF9243A5016009C5A51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8160CF8243A5016009C5A51 /* Constants.swift */; };
 		C8160CFB243A50FB009C5A51 /* AddCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8160CFA243A50FB009C5A51 /* AddCategoryVC.swift */; };
+		C844B7712447607000954682 /* TestYourselfCategoryPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C844B7702447607000954682 /* TestYourselfCategoryPickerVC.swift */; };
 		C851AE2E2444A45900291CCC /* QuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851AE2C2444A45900291CCC /* QuestionsCell.swift */; };
 		C851AE2F2444A45900291CCC /* QuestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C851AE2D2444A45900291CCC /* QuestionsCell.xib */; };
 		C851AE312444A48000291CCC /* QuestionsDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851AE302444A48000291CCC /* QuestionsDataVC.swift */; };
@@ -33,6 +34,7 @@
 		C8160CF5243A4E34009C5A51 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		C8160CF8243A5016009C5A51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C8160CFA243A50FB009C5A51 /* AddCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryVC.swift; sourceTree = "<group>"; };
+		C844B7702447607000954682 /* TestYourselfCategoryPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestYourselfCategoryPickerVC.swift; sourceTree = "<group>"; };
 		C851AE2C2444A45900291CCC /* QuestionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCell.swift; sourceTree = "<group>"; };
 		C851AE2D2444A45900291CCC /* QuestionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsCell.xib; sourceTree = "<group>"; };
 		C851AE302444A48000291CCC /* QuestionsDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataVC.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				C8A4D26D243BB2E200F2425C /* CategoriesDataVC.swift */,
 				C851AE302444A48000291CCC /* QuestionsDataVC.swift */,
 				C851AE322444AEE600291CCC /* ModalAddQuestionsVC.swift */,
+				C844B7702447607000954682 /* TestYourselfCategoryPickerVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				C851AE2E2444A45900291CCC /* QuestionsCell.swift in Sources */,
 				C8A4D26C243A79F100F2425C /* AddQuestionsVC.swift in Sources */,
 				C895FC41243A46BB00C47248 /* AppDelegate.swift in Sources */,
+				C844B7712447607000954682 /* TestYourselfCategoryPickerVC.swift in Sources */,
 				C895FC43243A46BB00C47248 /* SceneDelegate.swift in Sources */,
 				C8160CF9243A5016009C5A51 /* Constants.swift in Sources */,
 			);
