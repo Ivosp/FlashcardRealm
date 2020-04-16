@@ -22,7 +22,7 @@ struct Constants {
         static let MenuToTestingSegue           = "TestYourselfSegue"
         static let CategoriesToQuestionsSegue   = "CatToQuestionsSegue"
         static let AddQuestionSegue             = "AddQuestionSegue"
-        
+        static let TestYourselfSegue            = "TestYourselfSegue"
     }
     
     struct CategoryTableView {

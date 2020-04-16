@@ -40,6 +40,15 @@ class TestYourselfCategoryPickerVC: UIViewController, UIPickerViewDelegate, UIPi
         pickerView(categoryPicker, didSelectRow: 0, inComponent: 0)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! TestYourselfVC
+        
+        if let category = selectedCategory {
+            destinationVC.selectedCategory = category
+        }
+        
+    }
+    
 
     
     // MARK: - General class functions
@@ -50,6 +59,7 @@ class TestYourselfCategoryPickerVC: UIViewController, UIPickerViewDelegate, UIPi
     
     // MARK: - Buttons
     @IBAction func testYourselfButton(_ sender: UIButton) {
+        performSegue(withIdentifier: Constants.Segues.TestYourselfSegue, sender: self)
     }
     
     
