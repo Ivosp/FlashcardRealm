@@ -9,15 +9,17 @@
 import UIKit
 import RealmSwift
 
-class TestYourselfVC: UIViewController {
+class LearnVC: UIViewController {
     
     // Constants and Variables
     let realm = try! Realm()
-    
+        
+    var categoryString = ""
     var questions: Results<Question>?
-    var questionCount = 0
-    
     var questionArray = [Question]()
+
+    var questionCount = 0
+    var progressCount = 0
     
     var selectedCategory: Category? {
         didSet {
@@ -25,13 +27,10 @@ class TestYourselfVC: UIViewController {
         }
     }
     
-    var categoryString = ""
-    var progressCount = 0
-    
     // Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var questionView: UIView!
-    
+    @IBOutlet weak var nextQuestionBtn: UIButton!
     
     // Outlets in Subview
     @IBOutlet weak var questionLabel: UILabel!
@@ -47,35 +46,40 @@ class TestYourselfVC: UIViewController {
         super.viewDidLoad()
         loadQuestions()
         progressCount = 1
-        print(questions, questionCount)
         
+        questionLabelTopConstraint.constant = questionView.frame.height / 2
         
-        questionView.layer.shadowRadius = questionView.frame.height / 5
+        questionView.layer.shadowRadius = 10
         questionView.layer.shadowColor = UIColor.systemOrange.cgColor
-        questionView.layer.shadowOffset = CGSize(width: questionView.frame.width / 5, height: questionView.frame.height / 5)
+        questionView.layer.shadowOffset = .zero
+        questionView.layer.opacity = 1
+        questionView
+            .layer.masksToBounds = false
         
         if let cat = selectedCategory?.categoryName {
             categoryString = cat
             titleLabel.text = "\(categoryString) - \(progressCount) out of \(questionCount)"
         }
         
-        
-        for i in 0...questionCount - 1 {
-            
-            if let question = questions?[i] {
-                questionArray.append(question)
+        // Checks whether questioncount is over 0 - if true, append each questionObject to Array to make iterable.
+        if questionCount != 0 {
+            for i in 0...questionCount - 1 {
+                
+                if let question = questions?[i] {
+                    questionArray.append(question)
+                }
             }
+            questionLabel.text = questionArray[0].question
+            hintLabel.text = questionArray[0].hint
+            answerLabel.text = questionArray[0].answer
+            
+        } else {
+            questionLabel.text = "Please enter data into this Category first."
         }
         
+        
         print(questionArray)
-        questionArray.shuffled()
-        
-        
-        
-        questionLabel.text = questionArray[progressCount].question
-        hintLabel.text = questionArray[progressCount].hint
-        answerLabel.text = questionArray[progressCount].answer
-        
+       
         hintLabel.isHidden = true
         answerLabel.isHidden = true
         // Do any additional setup after loading the view.
@@ -83,7 +87,7 @@ class TestYourselfVC: UIViewController {
     }
     
     func loadQuestions() {
-        questions = selectedCategory?.questions.sorted(byKeyPath: "question")
+        questions = selectedCategory?.questions.sorted(byKeyPath: "dateCreated")
         
         if let count = questions?.count {
             questionCount = count
@@ -96,20 +100,24 @@ class TestYourselfVC: UIViewController {
     @IBAction func showAnswerBtn(_ sender: UIButton) {
         answerLabel.isHidden = false
         questionLabelTopConstraint.constant = 50
+        questionLabel.font = UIFont.systemFont(ofSize: 25)
+
     }
     
     @IBAction func showHintBtn(_ sender: UIButton) {
         hintLabel.isHidden = false
         questionLabelTopConstraint.constant = 50
+        questionLabel.font = UIFont.systemFont(ofSize: 25)
     }
     
     @IBAction func nextQuestionBtn(_ sender: UIButton) {
-        print(progressCount, questionCount, questionArray.count)
+        print(progressCount, questionCount)
         if progressCount < questionCount {
             progressCount += 1
             
-            questionLabel.text = questionArray[progressCount - 1].question
             questionLabelTopConstraint.constant = questionView.frame.height / 2
+            questionLabel.text = questionArray[progressCount - 1].question
+            questionLabel.font = UIFont.systemFont(ofSize: 50)
             
             answerLabel.isHidden = true
             answerLabel.text = questionArray[progressCount - 1].answer
@@ -120,10 +128,12 @@ class TestYourselfVC: UIViewController {
             titleLabel.text = "\(categoryString) - \(progressCount) out of \(questionCount)"
             
         } else if progressCount == questionCount{
+
             self.progressCount = 1
             
             questionLabel.text = questionArray[progressCount - 1].question
             questionLabelTopConstraint.constant = questionView.frame.height / 2
+            questionLabel.font = UIFont.systemFont(ofSize: 25)
             
             answerLabel.isHidden = true
             answerLabel.text = questionArray[progressCount - 1].answer

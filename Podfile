@@ -8,4 +8,5 @@ target 'FlashcardRealm' do
   # Pods for FlashcardRealm
 pod 'IQKeyboardManagerSwift'
 pod 'RealmSwift'
+pod 'CLTypingLabel'
 end

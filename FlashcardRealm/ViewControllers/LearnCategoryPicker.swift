@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TestYourselfCategoryPickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class LearnCategoryPicker: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
     
     
@@ -29,6 +29,8 @@ class TestYourselfCategoryPickerVC: UIViewController, UIPickerViewDelegate, UIPi
         super.viewDidLoad()
         loadCategories()
         
+        title = "Category to learn"
+        
         categoryPicker.dataSource = self
         categoryPicker.delegate = self
         categoryPicker.reloadAllComponents()
@@ -36,12 +38,19 @@ class TestYourselfCategoryPickerVC: UIViewController, UIPickerViewDelegate, UIPi
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         categoryPicker.selectRow(0, inComponent: 0, animated: true)
         pickerView(categoryPicker, didSelectRow: 0, inComponent: 0)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! TestYourselfVC
+        let destinationVC = segue.destination as! LearnVC
         
         if let category = selectedCategory {
             destinationVC.selectedCategory = category
@@ -59,7 +68,7 @@ class TestYourselfCategoryPickerVC: UIViewController, UIPickerViewDelegate, UIPi
     
     // MARK: - Buttons
     @IBAction func testYourselfButton(_ sender: UIButton) {
-        performSegue(withIdentifier: Constants.Segues.TestYourselfSegue, sender: self)
+        performSegue(withIdentifier: Constants.Segues.LearnSegue, sender: self)
     }
     
     
