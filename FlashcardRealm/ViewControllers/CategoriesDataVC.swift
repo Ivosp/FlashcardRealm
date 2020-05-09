@@ -20,7 +20,7 @@ class CategoriesDataVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         title = "Categories"
         
         loadCategories()

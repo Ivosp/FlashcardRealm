@@ -14,6 +14,7 @@
 		C8160CFB243A50FB009C5A51 /* AddCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8160CFA243A50FB009C5A51 /* AddCategoryVC.swift */; };
 		C844B7712447607000954682 /* LearnCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C844B7702447607000954682 /* LearnCategoryPicker.swift */; };
 		C844B7732448E2CA00954682 /* LearnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C844B7722448E2CA00954682 /* LearnVC.swift */; };
+		C84B944224536C8700D4F116 /* TestMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84B944124536C8700D4F116 /* TestMenuController.swift */; };
 		C851AE2E2444A45900291CCC /* QuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851AE2C2444A45900291CCC /* QuestionsCell.swift */; };
 		C851AE2F2444A45900291CCC /* QuestionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C851AE2D2444A45900291CCC /* QuestionsCell.xib */; };
 		C851AE312444A48000291CCC /* QuestionsDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851AE302444A48000291CCC /* QuestionsDataVC.swift */; };
@@ -37,6 +38,7 @@
 		C8160CFA243A50FB009C5A51 /* AddCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryVC.swift; sourceTree = "<group>"; };
 		C844B7702447607000954682 /* LearnCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCategoryPicker.swift; sourceTree = "<group>"; };
 		C844B7722448E2CA00954682 /* LearnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVC.swift; sourceTree = "<group>"; };
+		C84B944124536C8700D4F116 /* TestMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMenuController.swift; sourceTree = "<group>"; };
 		C851AE2C2444A45900291CCC /* QuestionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCell.swift; sourceTree = "<group>"; };
 		C851AE2D2444A45900291CCC /* QuestionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsCell.xib; sourceTree = "<group>"; };
 		C851AE302444A48000291CCC /* QuestionsDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataVC.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C851AE322444AEE600291CCC /* ModalAddQuestionsVC.swift */,
 				C844B7702447607000954682 /* LearnCategoryPicker.swift */,
 				C844B7722448E2CA00954682 /* LearnVC.swift */,
+				C84B944124536C8700D4F116 /* TestMenuController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84B944224536C8700D4F116 /* TestMenuController.swift in Sources */,
 				C851AE312444A48000291CCC /* QuestionsDataVC.swift in Sources */,
 				C8160CF6243A4E34009C5A51 /* Question.swift in Sources */,
 				C851AE332444AEE600291CCC /* ModalAddQuestionsVC.swift in Sources */,

@@ -11,8 +11,7 @@ import RealmSwift
 
 class LearnCategoryPicker: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
    
-    
-    
+
     
     // Outlets
     @IBOutlet weak var categoryPicker: UIPickerView!
@@ -29,16 +28,17 @@ class LearnCategoryPicker: UIViewController, UIPickerViewDelegate, UIPickerViewD
         super.viewDidLoad()
         loadCategories()
         
-        title = "Category to learn"
+        title = "Choose your Category!"
         
         categoryPicker.dataSource = self
         categoryPicker.delegate = self
         categoryPicker.reloadAllComponents()
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        navigationController?.navigationBar.prefersLargeTitles = true
         
         categoryPicker.selectRow(0, inComponent: 0, animated: true)
         pickerView(categoryPicker, didSelectRow: 0, inComponent: 0)
@@ -46,7 +46,6 @@ class LearnCategoryPicker: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -91,11 +90,12 @@ class LearnCategoryPicker: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
+    
+            
         if let category = categories?[row] {
             return category.categoryName
         } else {
-            return "Please enter a Data first!"
+            return "Please enter Data first!"
         }
     }
 

@@ -11,7 +11,7 @@ import UIKit
 struct Constants {
     
     struct DatabaseNames {
-        static let primaryKey               = "categoryName"
+        static let primaryKey                   = "categoryName"
     }
     
     struct Segues {
@@ -19,6 +19,7 @@ struct Constants {
         static let AddCategorySegue             = "AddNewCategorySegue"
         static let MenuToAddQuestionsSegue      = "MenuToAddQuestionsVC"
         static let MenuToDataSegue              = "LookAtDataSegue"
+        static let MentuToTestSegue             = "MenuToTestSegue"
         static let CategoriesToQuestionsSegue   = "CatToQuestionsSegue"
         static let AddQuestionSegue             = "AddQuestionSegue"
         static let LearnCategorySegue           = "LearnCategorySegue"
@@ -27,12 +28,12 @@ struct Constants {
     
     struct CategoryTableView {
         
-        static let CategoryCell             = "CategoryCell"
+        static let CategoryCell                 = "CategoryCell"
         
     }
     
     struct QuestionsTableView {
-        static let QuestionCell             = "QuestionsCell"
+        static let QuestionCell                 = "QuestionsCell"
     }
     
     struct Colors {
