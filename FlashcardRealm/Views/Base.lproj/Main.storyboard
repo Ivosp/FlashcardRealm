@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGU-Md-7je" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.8985507246377" y="138.61607142857142"/>
+            <point key="canvasLocation" x="2193" y="-128"/>
         </scene>
         <!--LearnVC-->
         <scene sceneID="9BB-YE-cKg">
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nro-P1-zkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2673.913043478261" y="138.61607142857142"/>
+            <point key="canvasLocation" x="3451" y="-129"/>
         </scene>
         <!--Test Menu Controller-->
         <scene sceneID="m0G-De-WZC">
@@ -272,32 +272,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6n-jl-d7f">
-                                <rect key="frame" x="0.0" y="88" width="414" height="216"/>
-                            </pickerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-Fg-uqP">
-                                <rect key="frame" x="5" y="314" width="404" height="32"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qrH-d8-3yb">
+                                <rect key="frame" x="5" y="289.33333333333337" width="404" height="317.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="100" verticalHuggingPriority="100" text="How many Questions? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L2f-tJ-5K1">
-                                        <rect key="frame" x="0.0" y="0.0" width="268.66666666666669" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GY7-Bd-fhy">
-                                        <rect key="frame" x="283.66666666666669" y="0.0" width="11.333333333333314" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-0y-IeU">
-                                        <rect key="frame" x="310" y="0.0" width="94" height="32"/>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6n-jl-d7f">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="216"/>
+                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-Fg-uqP">
+                                        <rect key="frame" x="0.0" y="241.00000000000006" width="404" height="20.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="100" verticalHuggingPriority="100" text="How many Questions? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L2f-tJ-5K1">
+                                                <rect key="frame" x="0.0" y="0.0" width="268.66666666666669" height="20.333333333333332"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GY7-Bd-fhy">
+                                                <rect key="frame" x="283.66666666666669" y="0.0" width="11.333333333333314" height="20.333333333333332"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-0y-IeU">
+                                                <rect key="frame" x="310" y="0.0" width="94" height="20.333333333333332"/>
+                                                <connections>
+                                                    <action selector="questionCountStepper:" destination="vlF-lo-8Ps" eventType="valueChanged" id="EdT-4E-HQc"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gq4-MS-G7s">
+                                        <rect key="frame" x="0.0" y="286.33333333333331" width="404" height="32"/>
+                                        <segments>
+                                            <segment title="Sorted"/>
+                                            <segment title="Random"/>
+                                        </segments>
                                         <connections>
-                                            <action selector="questionCountStepper:" destination="vlF-lo-8Ps" eventType="valueChanged" id="EdT-4E-HQc"/>
+                                            <action selector="questionOrderSegmentControlAction:" destination="vlF-lo-8Ps" eventType="valueChanged" id="05v-un-4zK"/>
                                         </connections>
-                                    </stepper>
+                                    </segmentedControl>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnf-Wc-bEb">
@@ -314,15 +329,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="S6n-jl-d7f" firstAttribute="leading" secondItem="9PW-Ch-xsk" secondAttribute="leading" id="5M8-3k-Lvq"/>
-                            <constraint firstItem="Vap-Fg-uqP" firstAttribute="top" secondItem="S6n-jl-d7f" secondAttribute="bottom" constant="10" id="C5y-8Z-SPq"/>
+                            <constraint firstItem="qrH-d8-3yb" firstAttribute="centerY" secondItem="dRv-2d-fVS" secondAttribute="centerY" id="3cW-FX-8Wj"/>
                             <constraint firstItem="wnf-Wc-bEb" firstAttribute="leading" secondItem="9PW-Ch-xsk" secondAttribute="leading" id="DNw-Qs-cBw"/>
-                            <constraint firstItem="S6n-jl-d7f" firstAttribute="top" secondItem="9PW-Ch-xsk" secondAttribute="top" id="FZN-Mz-Elu"/>
-                            <constraint firstItem="Vap-Fg-uqP" firstAttribute="leading" secondItem="9PW-Ch-xsk" secondAttribute="leading" constant="5" id="QMS-6x-NGn"/>
-                            <constraint firstItem="9PW-Ch-xsk" firstAttribute="trailing" secondItem="Vap-Fg-uqP" secondAttribute="trailing" constant="5" id="YRq-n7-g4p"/>
+                            <constraint firstItem="qrH-d8-3yb" firstAttribute="leading" secondItem="9PW-Ch-xsk" secondAttribute="leading" constant="5" id="FVG-YO-Tmw"/>
+                            <constraint firstItem="qrH-d8-3yb" firstAttribute="centerX" secondItem="dRv-2d-fVS" secondAttribute="centerX" id="L2U-Ab-Bld"/>
+                            <constraint firstItem="9PW-Ch-xsk" firstAttribute="trailing" secondItem="qrH-d8-3yb" secondAttribute="trailing" constant="5" id="kGW-De-35v"/>
                             <constraint firstItem="9PW-Ch-xsk" firstAttribute="bottom" secondItem="wnf-Wc-bEb" secondAttribute="bottom" constant="10" id="lhV-ea-K3Y"/>
                             <constraint firstItem="9PW-Ch-xsk" firstAttribute="trailing" secondItem="wnf-Wc-bEb" secondAttribute="trailing" id="tUt-Ul-Evh"/>
-                            <constraint firstItem="S6n-jl-d7f" firstAttribute="trailing" secondItem="9PW-Ch-xsk" secondAttribute="trailing" id="xSZ-BL-tV6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9PW-Ch-xsk"/>
                     </view>
@@ -330,11 +343,82 @@
                     <connections>
                         <outlet property="categoryPickerView" destination="S6n-jl-d7f" id="MKx-2E-neH"/>
                         <outlet property="questionCountLabel" destination="GY7-Bd-fhy" id="jjr-vJ-Qde"/>
+                        <outlet property="questionOrderSegmentControl" destination="Gq4-MS-G7s" id="Lnb-CU-Cv9"/>
+                        <outlet property="testYourselfBtn" destination="wnf-Wc-bEb" id="wFJ-WM-wnW"/>
+                        <segue destination="KYZ-7F-eux" kind="show" identifier="TestSegue" id="B55-pm-1gX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zm-3H-fv0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3450.7246376811595" y="132.58928571428572"/>
+            <point key="canvasLocation" x="2193" y="718"/>
+        </scene>
+        <!--TestVC-->
+        <scene sceneID="d9P-it-BLO">
+            <objects>
+                <viewController id="KYZ-7F-eux" customClass="TestVC" customModule="FlashcardRealm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7e-Ge-cXm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYB-2y-Sex">
+                                <rect key="frame" x="50" y="248" width="314" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4r-Uf-498">
+                                        <rect key="frame" x="116" y="189" width="81" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Questin 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTj-Yt-1aM">
+                                        <rect key="frame" x="120" y="18" width="74" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="ZBI-RZ-Zb7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc7-Tj-xEo">
+                                <rect key="frame" x="165" y="729" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="flipForward:" destination="KYZ-7F-eux" eventType="touchUpInside" id="07w-iq-DTy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCH-En-vrK">
+                                <rect key="frame" x="288" y="729" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="flipBack:" destination="KYZ-7F-eux" eventType="touchUpInside" id="nTU-rc-k4E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UYB-2y-Sex" firstAttribute="leading" secondItem="kdw-Zz-6F7" secondAttribute="leading" constant="50" id="BeC-xm-T0R"/>
+                            <constraint firstItem="UYB-2y-Sex" firstAttribute="centerY" secondItem="q7e-Ge-cXm" secondAttribute="centerY" id="Cli-DW-VZu"/>
+                            <constraint firstItem="UYB-2y-Sex" firstAttribute="centerX" secondItem="q7e-Ge-cXm" secondAttribute="centerX" id="LL7-Y6-IS1"/>
+                            <constraint firstItem="kdw-Zz-6F7" firstAttribute="trailing" secondItem="UYB-2y-Sex" secondAttribute="trailing" constant="50" id="RlI-Cj-EqQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kdw-Zz-6F7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R6Y-Nm-38W"/>
+                    <connections>
+                        <outlet property="qOneLabel" destination="G4r-Uf-498" id="Ae2-B9-PzM"/>
+                        <outlet property="qTwoLabel" destination="gTj-Yt-1aM" id="x2N-At-BTV"/>
+                        <outlet property="questionView" destination="UYB-2y-Sex" id="l7l-X9-6zz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XH7-9t-1NZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3206" y="718"/>
         </scene>
         <!--AddQuestionsVC-->
         <scene sceneID="Y22-0C-fAY">
@@ -388,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdB-GQ-t2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675" y="-567"/>
+            <point key="canvasLocation" x="2329" y="-1114"/>
         </scene>
         <!--Categories DataVC-->
         <scene sceneID="2tJ-1d-xkp">
@@ -460,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PtI-Hw-1ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.5652173913045" y="864.50892857142856"/>
+            <point key="canvasLocation" x="2193" y="1473"/>
         </scene>
         <!--Questions Data VC-->
         <scene sceneID="syu-Ag-slA">
@@ -507,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kE5-wx-P2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675.36231884058" y="864.50892857142856"/>
+            <point key="canvasLocation" x="3451" y="1473"/>
         </scene>
         <!--Modal Add QuestionsVC-->
         <scene sceneID="ohG-DO-vUU">
@@ -607,7 +691,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86t-ZQ-WIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3431.884057971015" y="864.50892857142856"/>
+            <point key="canvasLocation" x="5380" y="1473"/>
         </scene>
         <!--AddCategoryVC-->
         <scene sceneID="U9q-MO-M0R">
@@ -649,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTr-r2-yIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="-567"/>
+            <point key="canvasLocation" x="1317" y="-1095"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xS0-rz-P48">

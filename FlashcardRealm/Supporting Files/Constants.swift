@@ -24,6 +24,7 @@ struct Constants {
         static let AddQuestionSegue             = "AddQuestionSegue"
         static let LearnCategorySegue           = "LearnCategorySegue"
         static let LearnSegue                   = "LearnSegue"
+        static let TestSegue                    = "TestSegue"
     }
     
     struct CategoryTableView {

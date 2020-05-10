@@ -13,11 +13,10 @@ class LearnVC: UIViewController {
     
     // Constants and Variables
     let realm = try! Realm()
-        
-    var categoryString = ""
     var questions: Results<Question>?
     var questionArray = [Question]()
 
+    var categoryString = ""
     var questionCount = 0
     var progressCount = 0
     

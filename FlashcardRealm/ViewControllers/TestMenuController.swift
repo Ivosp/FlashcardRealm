@@ -14,6 +14,8 @@ class TestMenuController: UIViewController {
     // Outlets
     @IBOutlet weak var categoryPickerView: UIPickerView!
     @IBOutlet weak var questionCountLabel: UILabel!
+    @IBOutlet weak var questionOrderSegmentControl: UISegmentedControl!
+    @IBOutlet weak var testYourselfBtn: UIButton!
     
     // variables and constants
     let realm = try! Realm()
@@ -35,6 +37,10 @@ class TestMenuController: UIViewController {
         categoryPickerView.reloadAllComponents()
         
         questionCountLabel.text = "\(questionsToTestCount)"
+        questionOrderSegmentControl.backgroundColor = .systemIndigo
+        testYourselfBtn.tintColor = .systemIndigo
+        
+        print(questionOrderSegmentControl.titleForSegment(at: questionOrderSegmentControl.selectedSegmentIndex)!)
         
     }
     
@@ -51,6 +57,10 @@ class TestMenuController: UIViewController {
         
     }
     
+    @IBAction func questionOrderSegmentControlAction(_ sender: UISegmentedControl) {
+        print(sender.titleForSegment(at: sender.selectedSegmentIndex))
+        
+    }
     
     @IBAction func questionCountStepper(_ sender: UIStepper) {
         sender.minimumValue = 0
@@ -62,8 +72,26 @@ class TestMenuController: UIViewController {
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! TestVC
+        
+        if let category = selectedCategory {
+            
+            destinationVC.selectedCategory = category
+            destinationVC.questionCount = questionsToTestCount
+            
+            
+        }
+        
+        
+        
+    }
+    
 
     @IBAction func testYourselfBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: Constants.Segues.TestSegue, sender: self)
     }
 }
 
@@ -89,8 +117,9 @@ extension TestMenuController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if categories?.isEmpty == false {
             selectedCategory = categories?[row]
+            var categoryName = selectedCategory?.categoryName
             categoryQuestionCount = selectedCategory?.questions.count as! Int
-            print(selectedCategory?.categoryName, categoryQuestionCount)
+            print(categoryName!, categoryQuestionCount)
         } else {
             return
         }
